@@ -5,5 +5,8 @@
 !/niri
 !/niri/*
 !/niri/**/*
+!/install
+!/install/*
+!/install/**/*
 !/.gitignore
 
