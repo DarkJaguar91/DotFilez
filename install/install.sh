@@ -27,3 +27,7 @@ echo "\n\nInstalling Flatpak and apps"
 paru --noconfirm -S flatpak
 
 flatpak install -y com.brave.Browser com.valvesoftware.Steam dev.vencord.Vesktop io.github.radiolamp.mangojuice com.spotify.Client com.vysp3r.ProtonPlus io.github.kolunmi.Bazaar org.freedesktop.Platform.VulkanLayer.MangoHud//25.08
+
+echo "\n\nCopying wallpapers"
+
+cp -r ./Wallpapers $HOME/Pictures/Wallpapers

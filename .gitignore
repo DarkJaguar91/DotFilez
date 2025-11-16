@@ -8,5 +8,8 @@
 !/install
 !/install/*
 !/install/**/*
+!/Wallpapers
+!/Wallpapers/*
+!/Wallpapers/**/*
 !/.gitignore
 
