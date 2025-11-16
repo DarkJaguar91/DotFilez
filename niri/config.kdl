@@ -46,19 +46,6 @@ layout {
 
     default-column-width { proportion 0.5; }
 
-    preset-column-widths {
-        proportion 0.33333
-        proportion 0.5
-        proportion 0.66667
-        proportion 0.9
-    }
-    preset-window-heights {
-        proportion 0.33333
-        proportion 0.5
-        proportion 0.66667
-        proportion 1.0
-    }
-
     focus-ring {
         width 1.5
 
@@ -97,6 +84,12 @@ layer-rule {
   place-within-backdrop true
 }
 
+overview {
+  workspace-shadow {
+    off
+  }
+}
+
 //    █████████               █████                      █████                         █████
 //   ███░░░░░███             ░░███                      ░░███                         ░░███
 //  ░███    ░███  █████ ████ ███████    ██████   █████  ███████    ██████   ████████  ███████
@@ -133,7 +126,7 @@ debug {
 }
 
 window-rule {
-    geometry-corner-radius 20
+    geometry-corner-radius 10
     clip-to-geometry true
 }
 
