@@ -1,0 +1,10 @@
+include "input.kdl"
+include "outputs.kdl"
+include "layout.kdl"
+include "environment.kdl"
+include "startup.kdl"
+include "workspaces.kdl"
+include "rules.kdl"
+include "binds.kdl"
+
+include "./noctalia.kdl"

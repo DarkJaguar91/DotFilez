@@ -1,0 +1,84 @@
+// Add Noctalia wallpaper to overview background
+layer-rule {
+  match namespace="^noctalia-wallpaper*"
+  place-within-backdrop true
+}
+
+overview {
+  workspace-shadow {
+    off
+  }
+}
+
+window-rule {
+    geometry-corner-radius 8
+    clip-to-geometry true
+}
+
+// Float rule
+window-rule {
+    match title="Special Offers"
+    match title="Friends List"
+    match title="Steam Settings"
+    match app-id="org.kde.kcalc"
+    match app-id="blueman-manager"
+    match title="Bluetooth"
+    match app-id=r#"^blueberry*"#
+    match app-id="org.kde.kdeconnect.app"
+    match app-id="nm-connection-editor"
+    match app-id="org.kde.polkit-kde-authentication-agent-1"
+    match app-id="polkit-gnome-authentication-agent-1"
+    match title="gtk*"
+    match app-id="GParted"
+    match app-id="nwg-look"
+    match app-id="qt6ct"
+    match app-id="qt5ct"
+    match app-id="firefox" title="Picture-in-Picture"
+    match app-id="floorp" title="Picture-in-Picture"
+    match app-id="zen" title="Picture-in-Picture"
+    match app-id="xdg-desktop-portal-gtk"
+    match app-id="org.pulseaudio.pavucontrol"
+    match title="popup title with spaces"
+    match title="zoom"
+    match title="Picture-in-Picture"
+    match title="Picture-in-picture"
+    match title="Picture in picture"
+
+    open-floating true
+    open-focused true
+    default-column-width { }
+    default-window-height { }
+}
+
+// Open on Main workspace
+window-rule {
+  match app-id="brave-browser"
+
+  open-on-workspace "Main"
+}
+
+// Open on Media workspace
+window-rule {
+    match app-id="steam"
+    match app-id="Spotify"
+    match app-id="Discord"
+    match app-id="vesktop"
+
+    open-on-workspace "Media"
+}
+
+// Open on Games workspace
+window-rule {
+  match app-id="steam_app_*"
+  
+  open-on-workspace "Games"
+}
+
+// Fullscreen rule
+window-rule {
+    match app-id="mpv"
+    match app-id="steam_app_*"
+
+    open-focused true
+    open-fullscreen true
+}

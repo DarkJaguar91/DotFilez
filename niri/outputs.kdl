@@ -1,0 +1,9 @@
+output "DP-1" {
+  mode "3840x2160@119.999"
+  scale 1.25
+}
+
+output "eDP-1" {
+  mode "2560x1600@180.000"
+  scale 1.25
+}
