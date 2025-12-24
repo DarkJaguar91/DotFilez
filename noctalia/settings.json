@@ -425,7 +425,7 @@
         "warningColor": ""
     },
     "templates": {
-        "alacritty": false,
+        "alacritty": true,
         "cava": true,
         "code": false,
         "discord": false,

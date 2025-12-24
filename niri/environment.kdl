@@ -10,7 +10,7 @@ environment {
     CLUTTER_BACKEND "wayland"
     SDL_VIDEODRIVER "wayland"
     QT_QPA_PLATFORM "wayland;xcb"
-    QT_QPA_PLATFORMTHEME "qt5ct"
+    QT_QPA_PLATFORMTHEME "qt6ct"
     GTK_THEME "adw-gtk3"
     QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
     QT_SCALE_FACTOR "1"

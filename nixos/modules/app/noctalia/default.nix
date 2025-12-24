@@ -14,6 +14,8 @@
   environment.systemPackages = with pkgs; [
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     matugen
+    nwg-look
+    adw-gtk3
   ];
 
   environment.etc."tmpfiles.d/home-${usr.login}-noctalia.conf".text = ''

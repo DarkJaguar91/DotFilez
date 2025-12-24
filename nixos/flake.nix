@@ -33,6 +33,18 @@
 	    ./modules
           ];
         };
+        DJNixos = nixpkgs.lib.nixosSystem {
+          inherit system;
+	  specialArgs = {
+            inherit inputs;
+	    inherit usr;
+	    inherit configPath;
+	  };
+          modules = [
+            ./hosts/DJNixos
+	    ./modules
+          ];
+        };
       };
     };
 }
