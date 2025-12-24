@@ -5,6 +5,7 @@
     ./noctalia
     ./nvim
     ./steam
+    ./swayidle
     ./wallpapers
   ];
 }
