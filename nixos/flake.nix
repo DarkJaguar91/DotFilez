@@ -47,6 +47,18 @@
             ./modules
           ];
         };
+        DJServer = nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = {
+            inherit inputs;
+            inherit usr;
+            inherit configPath;
+          };
+          modules = [
+            ./hosts/DJServer
+            ./modules
+          ];
+        };
       };
     };
 }
