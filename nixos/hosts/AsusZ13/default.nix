@@ -45,8 +45,32 @@
 
   # DJ Enabled
   dj = {
+    # Graphics Drivers
+    graphics.amd.enable = true;
+
+    # Applications
     flatpak.enable = true;
     gnome.enable = true;
     niri.enable = true;
+    nvim.enable = true;
+    steam.enable = true;
+
+    # Server Applications
+    arr = {
+      enable = false;
+      configPath = "/SSDJaguar/config";
+    };
+    home-assistant = {
+      enable = false;
+      trustedProxies = [
+        "192.168.68.251"
+        "127.0.0.1"
+      ];
+    };
+    netdata.enable = false;
+    plex = {
+      enable = false;
+      configPath = "/SSDJaguar/config";
+    };
   };
 }
