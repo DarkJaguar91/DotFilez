@@ -1,5 +1,6 @@
 {
   imports = [
+    ./flatpak
     ./gnome
     ./niri
     ./noctalia

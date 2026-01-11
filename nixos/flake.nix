@@ -11,38 +11,40 @@
     };
   };
 
-  outputs = { nixpkgs, nixpkgs-unstable, ... }@inputs:
+  outputs =
+    { nixpkgs, nixpkgs-unstable, ... }@inputs:
     let
       system = "x86_64-linux";
       usr = {
         name = "Brandon Talbot";
-	login = "brandon";
+        login = "brandon";
       };
       configPath = "/home/brandon/DJDotz";
-    in {
-      nixosConfigurations ={ 
+    in
+    {
+      nixosConfigurations = {
         AsusZ13 = nixpkgs.lib.nixosSystem {
           inherit system;
-	  specialArgs = {
+          specialArgs = {
             inherit inputs;
-	    inherit usr;
-	    inherit configPath;
-	  };
+            inherit usr;
+            inherit configPath;
+          };
           modules = [
             ./hosts/AsusZ13
-	    ./modules
+            ./modules
           ];
         };
         DJNixos = nixpkgs.lib.nixosSystem {
           inherit system;
-	  specialArgs = {
+          specialArgs = {
             inherit inputs;
-	    inherit usr;
-	    inherit configPath;
-	  };
+            inherit usr;
+            inherit configPath;
+          };
           modules = [
             ./hosts/DJNixos
-	    ./modules
+            ./modules
           ];
         };
       };

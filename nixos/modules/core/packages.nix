@@ -4,7 +4,7 @@
 }: 
 {
   nixpkgs.config.allowUnfree = true;
-  
+
   programs = {
     fish.enable = true;
     appimage = {

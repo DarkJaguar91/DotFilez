@@ -1,15 +1,27 @@
 {
+  config,
+  lib,
   pkgs,
   usr,
   configPath,
   ...
 }:
+with lib;
+let
+  cfg = config.dj.swayidle;
+in
 {
-  environment.systemPackages = with pkgs; [
-    swayidle
-  ];
+  options.dj.swayidle = {
+    enable = mkEnableOption "Swayidle lock timer";
+  };
 
-  environment.etc."tmpfiles.d/home-${usr.login}-swayidle.conf".text = ''
-    L+    /home/${usr.login}/.config/swayidle                   -    ${usr.login}    -     -           ${configPath}/swayidle
-  '';
+  config = mkIf cfg.enable {
+    environment.systemPackages = with pkgs; [
+      swayidle
+    ];
+
+    environment.etc."tmpfiles.d/home-${usr.login}-swayidle.conf".text = ''
+      L+    /home/${usr.login}/.config/swayidle                   -    ${usr.login}    -     -           ${configPath}/swayidle
+    '';
+  };
 }

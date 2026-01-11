@@ -1,24 +1,42 @@
 {
+  config,
+  lib,
   pkgs,
-  inputs,
   usr,
   configPath,
   ...
 }:
+with lib;
+let
+  cfg = config.dj.niri;
+in
 {
-  # Todo - Display Manager SDDM or GDM??
-  programs = {
-    niri.enable = true;
+  options.dj.niri = {
+    enable = mkEnableOption "Niri desktop environment";
   };
 
-  environment.systemPackages = with pkgs; [
-    xwayland-satellite
+  config = mkIf cfg.enable {
+    dj.noctalia.enable = mkForce true;
+    dj.swayidle.enable = mkForce true;
 
-    alacritty
-    foot
-  ];
+    services = {
+      xserver.enable = true;
+      displayManager.gdm.enable = true;
+    };
 
-  environment.etc."tmpfiles.d/home-${usr.login}-niri.conf".text = ''
-    L+    /home/${usr.login}/.config/niri                   -    ${usr.login}    -     -           ${configPath}/niri
-  '';
+    programs = {
+      niri.enable = true;
+    };
+
+    environment.systemPackages = with pkgs; [
+      xwayland-satellite
+
+      alacritty
+      foot
+    ];
+
+    environment.etc."tmpfiles.d/home-${usr.login}-niri.conf".text = ''
+      L+    /home/${usr.login}/.config/niri                   -    ${usr.login}    -     -           ${configPath}/niri
+    '';
+  };
 }

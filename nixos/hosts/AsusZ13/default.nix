@@ -4,7 +4,10 @@
   ];
 
   boot = {
-    kernelModules = [ "mt7925e" "kvm-amd" ];
+    kernelModules = [
+      "mt7925e"
+      "kvm-amd"
+    ];
     kernelParams = [
       "mem_sleep_default=deep"
       "pcie_aspm.policy=powersupersave"
@@ -22,7 +25,7 @@
       };
       user = "brandon";
     };
-   
+
     udev = {
       extraHwdb = ''
         # Fixes mic mute button
@@ -39,4 +42,11 @@
 
   #flow devices are 2 in 1 laptops
   hardware.sensor.iio.enable = true;
+
+  # DJ Enabled
+  dj = {
+    flatpak.enable = true;
+    gnome.enable = true;
+    niri.enable = true;
+  };
 }
