@@ -1,7 +1,7 @@
 {
   pkgs,
   ...
-}: 
+}:
 {
   nixpkgs.config.allowUnfree = true;
 
@@ -14,33 +14,34 @@
   };
 
   environment.systemPackages = with pkgs; [
-     # App Image support
-     xorg.libxcb
-     xorg.libxcb.dev
-     xorg.xcbutilwm
-     xorg.xcbutilimage
-     xorg.xcbutilkeysyms
-     xorg.xcbutilrenderutil
-     xcb-util-cursor
-     kdePackages.qtwayland
+    # App Image support
+    xorg.libxcb
+    xorg.libxcb.dev
+    xorg.xcbutilwm
+    xorg.xcbutilimage
+    xorg.xcbutilkeysyms
+    xorg.xcbutilrenderutil
+    xcb-util-cursor
+    kdePackages.qtwayland
 
-     fishPlugins.tide
-     wget
-     git
-     neovim
+    fishPlugins.tide
+    wget
+    git
+    neovim
 
-     brave
-     prusa-slicer
-     freecad
-     blender
-     vesktop
-     spotify
+    brave
+    prusa-slicer
+    orca-slicer
+    freecad
+    blender
+    vesktop
+    spotify
 
-     killall
-     ripgrep
+    killall
+    ripgrep
 
-     # Arduino dev
-     avrdude
-     usbutils
+    # Arduino dev
+    avrdude
+    usbutils
   ];
 }
