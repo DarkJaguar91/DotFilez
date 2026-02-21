@@ -9,6 +9,7 @@
     ./noctalia
     ./nvim
     ./plex
+    ./qemu
     ./steam
     ./swayidle
     ./wallpapers

@@ -184,10 +184,6 @@
             },
             {
                 "enabled": true,
-                "id": "timer-card"
-            },
-            {
-                "enabled": true,
                 "id": "weather-card"
             }
         ]
@@ -197,7 +193,7 @@
         "generationMethod": "tonal-spot",
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
-        "monitorForColors": "",
+        "monitorForColors": "DP-3",
         "predefinedScheme": "Noctalia (default)",
         "schedulingMode": "off",
         "useWallpaperColors": true
@@ -467,19 +463,7 @@
         "activeTemplates": [
             {
                 "enabled": true,
-                "id": "gtk"
-            },
-            {
-                "enabled": true,
-                "id": "qt"
-            },
-            {
-                "enabled": true,
                 "id": "kcolorscheme"
-            },
-            {
-                "enabled": true,
-                "id": "alacritty"
             },
             {
                 "enabled": true,
@@ -491,7 +475,23 @@
             },
             {
                 "enabled": true,
+                "id": "alacritty"
+            },
+            {
+                "enabled": true,
                 "id": "niri"
+            },
+            {
+                "enabled": true,
+                "id": "qt"
+            },
+            {
+                "enabled": true,
+                "id": "discord"
+            },
+            {
+                "enabled": true,
+                "id": "gtk"
             }
         ],
         "enableUserTheming": false

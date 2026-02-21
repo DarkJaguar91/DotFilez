@@ -1,4 +1,5 @@
 spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1 &"
+spawn-sh-at-startup "xwayland-satellite"
 spawn-at-startup "noctalia-shell"
 spawn-at-startup "swayidle"
 

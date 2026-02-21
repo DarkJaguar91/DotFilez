@@ -19,4 +19,5 @@ environment {
     GDK_BACKEND "wayland,x11,*"
     GTK_USE_PORTAL "1"
     WLR_NO_HARDWARE_CURSORS "1"
+    STEAM_FORCE_DESKTOPUI_SCALING "2"
 }

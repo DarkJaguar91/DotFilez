@@ -19,6 +19,7 @@
     gnome.enable = true;
     niri.enable = true;
     nvim.enable = true;
+    qemu.enable = true;
     steam.enable = true;
 
     # Server Applications

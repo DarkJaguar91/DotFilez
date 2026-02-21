@@ -33,10 +33,14 @@ in
 
       alacritty
       foot
+
+      # GSettings stuff
+      glib
+      gsettings-desktop-schemas
     ];
 
     environment.etc."tmpfiles.d/home-${usr.login}-niri.conf".text = ''
-      L+    /home/${usr.login}/.config/niri                   -    ${usr.login}    -     -           ${configPath}/niri
+      L+    /home/${usr.login}/.config/niri                   -    ${usr.login}    users     -           ${configPath}/niri
     '';
   };
 }
