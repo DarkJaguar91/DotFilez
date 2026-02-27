@@ -1,5 +1,6 @@
 {
   imports = [
+    ./ai
     ./arr-services
     ./flatpak
     ./gnome
@@ -9,6 +10,7 @@
     ./noctalia
     ./nvim
     ./plex
+    ./polymath
     ./qemu
     ./steam
     ./swayidle

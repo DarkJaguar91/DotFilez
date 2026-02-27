@@ -28,6 +28,8 @@
     wget
     git
     neovim
+    p7zip
+    xorriso
 
     brave
     prusa-slicer
@@ -40,8 +42,16 @@
     killall
     ripgrep
 
+    # CLI Screenshot
+    grim # screenshot tool
+    slurp # Lightweight clipboard image editor
+    wf-recorder # CLI Screen recorder
+    swappy
+
     # Arduino dev
     avrdude
     usbutils
+
+    dpkg
   ];
 }

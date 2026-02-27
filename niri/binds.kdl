@@ -4,6 +4,7 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal" { spawn "alacritty"; }
     Mod+Space hotkey-overlay-title="Open Launcher" { spawn "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
+    Super+S hotkey-overlay-title="Take Screenshot" { spawn-sh "grim -g \"$(slurp)\" - | swappy -f -"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }

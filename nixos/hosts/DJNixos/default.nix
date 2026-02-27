@@ -21,6 +21,7 @@
     nvim.enable = true;
     qemu.enable = true;
     steam.enable = true;
+    polymath.enable = true;
 
     # Server Applications
     arr = {
